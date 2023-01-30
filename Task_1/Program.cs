@@ -48,4 +48,4 @@ for (int j = 0; j < array.Length; j++)
         count++;
     }
 }
-System.Console.WriteLine($"Ответ: Всего {array.Length} чисел, {count} из них чётные.");
+System.Console.WriteLine($"В данном массиве чётные цифр > {count}");
