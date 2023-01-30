@@ -34,18 +34,23 @@ void PrintArray(int[] array)
     System.Console.WriteLine();
 }
 
+int CountArray(int[] array)
+{
+    int count = 0;
+    for (int j = 0; j < array.Length; j++)
+    {
+        if (array[j] % 2 == 0)
+        {
+            count++;
+        }
+    }
+    System.Console.WriteLine($"В данном массиве чётные цифр > {count}");
+    return count;
+}
+
 int size = InputInt("Введите количество элементов массива");
 int[] array = new int[size];
 CreateArray(array);
 System.Console.Write("Наш массив:");
 PrintArray(array);
-
-int count = 0;
-for (int j = 0; j < array.Length; j++)
-{
-    if (array[j] % 2 == 0)
-    {
-        count++;
-    }
-}
-System.Console.WriteLine($"В данном массиве чётные цифр > {count}");
+int result = CountArray(array);
